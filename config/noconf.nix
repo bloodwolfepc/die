@@ -44,5 +44,7 @@
     tmux-navigator = {
       enable = true;
     };
+
+    bufferline.enable = true;
   };
 }
