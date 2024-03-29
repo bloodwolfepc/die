@@ -1,5 +1,6 @@
 {
   config.plugins = {
+    lsp-format.enable = false;
     lsp = {
       enable = true;
       servers = {
@@ -11,7 +12,9 @@
         jsonls.enable = true;
         marksman.enable = true;
         lua-ls.enable = true;
-        lua-ls.rootDir = "null";
+        nil_ls.enable = true;
+        #tsserver.enable = true;
+        #ruff-lsp.enable = true;
         pyright.enable = true;
         tailwindcss.enable = true;
         yamlls.enable = true;

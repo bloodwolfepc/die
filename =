@@ -1,0 +1,13 @@
+/000   ../
+/012   completion/
+/009   external/
+/004   filesystem/
+/007   language/
+/006   navigation/
+/014   telescope/
+/010   utils/
+/015   visual/
+/013   default.nix
+/008   keymaps.nix
+/005   opt.nix
+/011   staging.nix
