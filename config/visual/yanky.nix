@@ -1,5 +1,5 @@
 {
-  yanky = { 
+  plugins.yanky = { 
     enable = true;
     highlight = {
       onYank = true;

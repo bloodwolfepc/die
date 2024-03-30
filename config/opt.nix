@@ -7,35 +7,62 @@
         vim.opt.iskeyword:append("-")
     '';
     options = {
-      
-      tabstop = 2;
-      shiftwidth = 2;
-      softtabstop = 2;
-      expandtab = true;
-      smartindent = true;
-      wrap = false;
-      
-      incsearch = true;
-      ignorecase = true;
-      smartcase = true;
-      hlsearch = false;
-      
+      #relative number
       relativenumber = true;
       number = true;
-      signcolumn = "number";
+
+      #2 space tab
+      tabstop = 2;
+      softtabstop = 2;
+      showtabline = 2;
+      expandtab = true;
+
+      #auto indent, set to spaces
+      smartindent = true;
+      shiftwidth = 2;
+
+      #smart indent
+      breakindent = true;
+      
+      #incremental search
+      hlsearch = false;
+      incsearch = true;
+
+      wrap = false;
+      
+      #spits
+      splitbelow = true;
+      splitright = true;
+
+      #letter casing
+      ignorecase = true;
+      smartcase = true;
+
+      updatetime = 50;
+      timeoutlen = 10;
+
+      completeopt = ["menuone" "noselect" "noinsert"];
+
+      swapfile = false;
+      backup = false;
+      undofile = true;
+      undodir = "/tmp/vim-undo";
+      
       termguicolors = true;
+
       colorcolumn = "100";
+
       cmdheight = 1;
+
       scrolloff = 20;
-      completeopt = "menuone,noinsert,noselect";
+
+      signcolumn = "number";
+
+      pumheight = 0;
 
       hidden = true;
-      undodir = "/tmp/vim-undo";
-      undofile = true;
       backspace = "indent,eol,start";
-      splitright = true;
-      splitbelow = true;
-      autochdir = false;
+      #autochdir = false;
 
       path = "**";
       wildmenu = true;

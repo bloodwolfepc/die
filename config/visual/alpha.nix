@@ -1,6 +1,6 @@
 {
   plugins.alpha = {
-    enabled = true;
+    enable = true;
     theme = null;
     iconsEnabled = true;
     layout = [

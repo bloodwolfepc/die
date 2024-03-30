@@ -8,6 +8,7 @@
   ./completion/wilder.nix
   ./completion/copilot.nix
   ./completion/luasnip.nix
+  ./completion/surround.nix
 
   ./external/neocord.nix
   ./external/wakatime.nix
@@ -40,6 +41,7 @@
   ./utils/comment-nvim.nix
   ./utils/todo-comments.nix
   ./utils/tmux-navigator.nix
+  ./utils/vimwiki.nix
 
   ./visual/alpha.nix
   ./visual/yanky.nix

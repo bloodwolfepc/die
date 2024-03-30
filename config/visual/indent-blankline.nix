@@ -1,6 +1,6 @@
 {
   plugins.indent-blankline = {
-    enabled = true;
+    enable = true;
     scope = {
       enabled = true;
       showStart = true;
