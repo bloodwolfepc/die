@@ -25,7 +25,7 @@
     #};
   };
   keymaps = [
-    { mode = "n"; key = "<leader>lo"; action = ":oil<CR>"; options.silent = true; }
+    { mode = "n"; key = "<leader>o"; action = ":Oil<CR>"; options.silent = true; }
   ];
 }
 

@@ -14,11 +14,14 @@
   ./external/wakatime.nix
   ./external/markdown-preview.nix
 
-  ./filesystem/nvim-tree.nix
-  ./filesystem/oil.nix
+  #./filesystem/nvim-tree.nix
   #./filesystem/neo-tree.nix
+  ./filesystem/oil.nix
 
-  #./git/
+  ./git/neogit.nix
+  ./git/lazygit.nix
+  ./git/diffview.nix
+  ./git/gitsigns.nix
 
   ./language/lsp.nix
   ./language/lspsaga.nix
@@ -42,6 +45,7 @@
   ./utils/todo-comments.nix
   ./utils/tmux-navigator.nix
   ./utils/vimwiki.nix
+  ./utils/marks.nix
 
   ./visual/alpha.nix
   ./visual/yanky.nix
@@ -51,5 +55,9 @@
   ./visual/illuminate.nix
   ./visual/nvim-colorizer.nix
   ./visual/indent-blankline.nix
+  ./visual/notify.nix
+
+
+  ./debug/dap.nix
   ];
 }

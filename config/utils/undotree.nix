@@ -1,8 +1,10 @@
 {
   plugins.undotree = {
     enable = true;
-    autoOpenDiff = true;
-    focusOnToggle = true;
+    settings = {
+      AutoOpenDiff = true;
+      FocusOnToggle = true;
+    };
   };
   keymaps = [
     {

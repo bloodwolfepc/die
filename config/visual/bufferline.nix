@@ -3,7 +3,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>k";
+      key = "<leader>l";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -12,7 +12,7 @@
 
     {
       mode = "n";
-      key = "<leader>j";
+      key = "<leader>h";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
