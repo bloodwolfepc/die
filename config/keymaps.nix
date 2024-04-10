@@ -1,5 +1,5 @@
 {
-  keymaps = [
+  keymaps = [ #TODO I use ciw alot , maybe there is a quick toggle for how a word is defined in opt
     { mode = "v"; key = "<"; action = "<gv"; options.silent = true; }
     { mode = "v"; key = ">"; action = ">gv"; options.silent = true; }
   

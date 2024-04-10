@@ -1,3 +1,5 @@
+
+{ lib, pkgs, ... }:
 {
   config.plugins = {
     lsp-format.enable = false;
@@ -19,12 +21,26 @@
         tailwindcss.enable = true;
         yamlls.enable = true;
         nixd.enable = true;
+        #java-language-server.enable = true;
         rust-analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
         };
+
       };
+
     };
+    nvim-jdtls = {
+      enable = true;
+      cmd = [ 
+        (lib.getExe pkgs.jdt-language-server)
+        "-data" "/home/bloodwolfe/jdtdata"
+        "-configuration" "/home/bloodwolfe/jdtconf"
+      ];
+      #data = "/home/bloodwolfe/jdtlsdata/";
+      #configuration = "/home/bloodwolfe/jdtlsconfig/";
+    };
+
   };
 }
