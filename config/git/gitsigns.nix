@@ -1,9 +1,9 @@
 {
   plugins.gitsigns = {
     enable = true;
-    trouble = true;
-    currentLineBlame = false;
     settings = {
+      trouble = true;
+      #currentLineBlame = false;
       signcolumn = false;
       signs = {
         add = { text = "+"; };
@@ -16,84 +16,84 @@
   };
   keymaps = [
     {
-      mode = ["n" "v"];
-      key = "<leader>gh";
-      action = "gitsigns";
+      mode = "n";
+      key = "<leader>gt";
+      action = ":Gitsigns blame_line<CR>"; #TODO if gt then toggle signcolumn and blame per line
       options = {
         silent = true;
-        desc = "+hunks";
+        desc = "Git Toggle";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghb";
+      key = "<leader>gb";
       action = ":Gitsigns blame_line<CR>";
       options = {
         silent = true;
-        desc = "Blame line";
+        desc = "Git Blame";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghd";
+      key = "<leader>gd";
       action = ":Gitsigns diffthis<CR>";
       options = {
         silent = true;
-        desc = "Diff This";
+        desc = "Git Diff";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghp";
+      key = "<leader>gp";
       action = ":Gitsigns preview_hunk<CR>";
       options = {
         silent = true;
-        desc = "Preview hunk";
+        desc = "Git Preview";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghR";
+      key = "<leader>gR";
       action = ":Gitsigns reset_buffer<CR>";
       options = {
         silent = true;
-        desc = "Reset Buffer";
+        desc = "Git Reset (buffer)";
       };
     }
     {
       mode = ["n" "v"];
-      key = "<leader>ghr";
+      key = "<leader>gr";
       action = ":Gitsigns reset_hunk<CR>";
       options = {
         silent = true;
-        desc = "Reset Hunk";
+        desc = "Git Reset (hunk)";
       };
     }
     {
       mode = ["n" "v"];
-      key = "<leader>ghs";
+      key = "<leader>gs";
       action = ":Gitsigns stage_hunk<CR>";
       options = {
         silent = true;
-        desc = "Stage Hunk";
+        desc = "Git Stage (hunk)";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghS";
+      key = "<leader>gS";
       action = ":Gitsigns stage_buffer<CR>";
       options = {
         silent = true;
-        desc = "Stage Buffer";
+        desc = "Git Stage (buffer)";
       };
     }
     {
       mode = "n";
-      key = "<leader>ghu";
+      key = "<leader>gu";
       action = ":Gitsigns undo_stage_hunk<CR>";
       options = {
         silent = true;
-        desc = "Undo Stage Hunk";
+        desc = "Git Undo Stage (hunk)";
       };
     }
   ];

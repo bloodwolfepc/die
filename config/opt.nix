@@ -1,9 +1,10 @@
 {
   config = {
+    viAlias = true;
     globals.mapleader = " ";
     clipboard.register = "unnamedplus";
     clipboard.providers.wl-copy.enable = true;
-    options = {
+    opts = {
       #relative number
       relativenumber = true;
       number = true;

@@ -5,152 +5,137 @@
     enable = true;
     extensions = {
       fzf-native.enable = true;
-      file_browser.enable = true;
-      media_files.enable = true;
+      media-files.enable = true;
       ui-select.enable = true;
       ui-select.settings.specific_opts.codeactions = true;
-      undo = {
-        enable = true;
-        mappings = {
-          i = {
-            "<cr>" = "yank_additions";
-            "<s-cr>" = "yank_deletions";
-            "<c-cr>" = "restore";
-          };
-          n = {
-            "y" = "yank_additions";
-            "Y" = "yank_deletions";
-            "u" = "restore";
-          };
-        };
-      };
+      undo.enable = true; #TODO set mappings for yank_additions, yank_deletions, and restore in I an N
     };
-    defaults.mappings.i."<esc>".__raw= ''
-      function (...)
-        return require("telescope.actions").close(...)
-      end
-    '';
-    keymaps = {
-      "<leader><space>" = {
-        action = "live_grep, {}";
-        desc = "Grep (project dir)";
-      };
-      "<leader>/" = {
-        action = "live_grep";
-        desc = "Grep (root dir)";
-      };
-      "<leader>:" = {
-        action = "command_history, {}";
-        desc = "Command History";
-      };
-      "<leader>b" = {
-        action = "buffers, {}";
-        desc = "+buffer";
-      };
-      "<leader>ff" = {
-        action = "find_files, {}";
-        desc = "Find project files";
-      };
-      "<leader>fr" = {
-        action = "oldfiles, {}";
-        desc = "Recent";
-      };
-      "<leader>fb" = {
-        action = "buffers, {}";
-        desc = "Buffers";
-      };
-      "<C-p>" = {
-        action = "git_files, {}";
-        desc = "Search git files";
-      };
-      "<leader>gc" = {
-        action = "git_commits, {}";
-        desc = "Commits";
-      };
-      "<leader>gs" = {
-        action = "git_status, {}";
-        desc = "Status";
-      };
-      "<leader>sa" = {
-        action = "autocommands, {}";
-        desc = "Auto Commands";
-      };
-      "<leader>sb" = {
-        action = "current_buffer_fuzzy_find, {}";
-        desc = "Buffer";
-      };
-      "<leader>sc" = {
-        action = "command_history, {}";
-        desc = "Command History";
-      };
-      "<leader>sC" = {
-        action = "commands, {}";
-        desc = "Commands";
-      };
-      "<leader>sD" = {
-        action = "diagnostics, {}";
-        desc = "Workspace diagnostics";
-      };
-      "<leader>sh" = {
-        action = "help_tags, {}";
-        desc = "Help pages";
-      };
-      "<leader>sH" = {
-        action = "highlights, {}";
-        desc = "Search Highlight Groups";
-      };
-      "<leader>sk" = {
-        action = "keymaps, {}";
-        desc = "Keymaps";
-      };
-      "<leader>sM" = {
-        action = "man_pages, {}";
-        desc = "Man pages";
-      };
-      "<leader>sm" = {
-        action = "marks, {}";
-        desc = "Jump to Mark";
-      };
-      "<leader>so" = {
-        action = "vim_options, {}";
-        desc = "Options";
-      };
-      "<leader>sR" = {
-        action = "resume, {}";
-        desc = "Resume";
-      };
-      "<leader>uC" = {
-        action = "colorscheme, {}";
-        desc = "Colorscheme preview";
-      };
+    settings = {
+      defaults.mappings.i."<esc>".__raw= ''
+        function (...)
+          return require("telescope.actions").close(...)
+        end
+      '';
     };
   };
+#TODO oldfiles, git_files, git_commits, git_status, autocommands
+# commands, diagnostics, help_tags, highlights, (document diagnostics) diagnostics bufnr=0
+# make a way for visual mode to never move the cursor after selection, maybe
   keymaps = [
+    {
+      mode = "n";
+      key = "<leader>ff";
+      action = "<cmd>Telescope find_files<CR>";
+      options = {
+        desc = "Fuzzy Files";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<cmd>Telescope live_grep<CR>";
+      options = {
+        desc = "Fuzzy Grep";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader><space>";
+      action = "<cmd>Telescope live_grep<CR>";
+      options = {
+        desc = "Fuzzy Grep (alternate)";
+        silent = true;
+      };
+    }
     {
       mode = "n";
       key = "<leader>fp";
       action = "<cmd>Telescope projects<CR>";
       options = {
-        desc = "Projects";
+        desc = "Fuzzy Projects";
+        silent = true;
       };
     }
-
     {
       mode = "n";
-      key = "<leader>sd";
-      action = "<cmd>Telescope diagnostics bufnr=0<cr>";
+      key = "<leader>fc";
+      action = "<cmd>Telescope command_history<CR>";
       options = {
-        desc = "Document diagnostics";
+        desc = "Fuzzy Command History";
+        silent = true;
       };
     }
-
     {
       mode = "n";
-      key = "<leader>st";
-      action = "<cmd>TodoTelescope<cr>";
+      key = "<leader>fb";
+      action = "<cmd>Telescope buffers<CR>";
+      options = {
+        desc = "Fuzzy Buffers";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fl";
+      action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+      options = {
+        desc = "Fuzzy Local (search buffer)";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fk";
+      action = "<cmd>Telescope keymaps<CR>";
+      options = {
+        desc = "Fuzzy Keymaps";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fk";
+      action = "<cmd>Telescope keymaps<CR>";
+      options = {
+        desc = "Fuzzy Keymaps";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fM";
+      action = "<cmd>Telescope man_pages<CR>";
+      options = {
+        desc = "Fuzzy Manual";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fm";
+      action = "<cmd>Telescope marks<CR>";
+      options = {
+        desc = "Fuzzy Marks";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ft";
+      action = "<cmd>Telescope todo-comments<cr>";
       options = {
         silent = true;
-        desc = "Todo (Telescope)";
+        desc = "Fuzzy Todo";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fo";
+      action = "<cmd>lua require('telescope.builtin').live_grep({grep_open_files=true})<cr>";
+      options = {
+        desc = "Fuzzy On-line (Grep Though Active Buffers)";
       };
     }
   ];
