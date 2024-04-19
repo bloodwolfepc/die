@@ -1,7 +1,6 @@
 {
   plugins.toggleterm = {
-    enable = true;
-    openMapping = "<A-i>";
+    enable = false;
     hideNumbers = false;
     shadeTerminals = false;
     startInInsert = true;

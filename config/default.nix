@@ -13,6 +13,7 @@
   ./external/neocord.nix
   ./external/wakatime.nix
   ./external/markdown-preview.nix
+  ./external/gpt.nix
 
   #./filesystem/nvim-tree.nix
   #./filesystem/neo-tree.nix
