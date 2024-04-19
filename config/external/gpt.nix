@@ -1,8 +1,8 @@
 { pkgs, lib, ... }: {
   extraPlugins = with pkgs.vimPlugins; [
     #ChatGPT-nvim
-   #plenary-nvim
-   #nui-nvim
+   plenary-nvim
+   nui-nvim
     (pkgs.vimUtils.buildVimPlugin {
       pname = "ChatGPT.nvim";
       version = "2024-04-19";
