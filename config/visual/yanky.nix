@@ -1,8 +1,8 @@
 {
   plugins.yanky = { 
     enable = true;
-    highlight = {
-      onYank = true;
+    settings = {
+      on_yank = true;
       timer = 200;
     };
   };

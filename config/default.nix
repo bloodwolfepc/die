@@ -40,7 +40,7 @@
 
   ./utils/undotree.nix
   ./utils/which-key.nix
-  ./utils/toggleterm.nix
+  #./utils/toggleterm.nix
   ./utils/persistence.nix
   ./utils/comment-nvim.nix
   ./utils/todo-comments.nix

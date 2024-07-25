@@ -14,7 +14,7 @@
         jsonls.enable = true;
         marksman.enable = true;
         lua-ls.enable = true;
-        nil_ls.enable = true;
+        nil-ls.enable = true;
         #tsserver.enable = true;
         #ruff-lsp.enable = true;
         pyright.enable = true;

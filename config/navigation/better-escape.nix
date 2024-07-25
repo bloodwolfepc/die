@@ -1,9 +1,11 @@
 {
   plugins.better-escape = {
     enable = true;
-    clearEmptyLines = true;
-    timeout = 200;
-    mapping = ["jk"];
+    settings = {
+      timeout = 200;
+    };
+    #clearEmptyLines = true;
+    #mapping = ["jk"];
   };
 #other quick setup
 }
